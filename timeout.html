@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Timeout Example</title>
+    <script type="text/javascript">
+      var counter = 0;
+      ID=window.setTimeout("Update();",2000);
+
+      function Update() {
+        counter++;
+        textField = document.getElementById("showText");
+        textField = innerHTML = "The counter is now at" + counter;
+        ID=window.setTimeout("Update();",2000);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Timeout Example</h1>
+    <p>The counter will update every two seconds.</p>
+    <p>Press RESET or STOP to restart or to stop the count.</p>
+    <hr/>
+    <form name="form1">
+      <p id="showtext"></p>
+      <div><input type="button" value="RESET" onclick="counter = 0;"/></div> 
+      <div><input type="button" value="STOP" onclick="window.clearTimeout(ID);"/></div> 
+    </form>
+  </body>
+</html>
